@@ -1,0 +1,17 @@
+html
+	head
+		title Order
+body
+	include ../partials/header
+	h1 #{user.username}
+	h3 #{userOrder["order"].restaurantName}
+	h3 Sub Total: #{userOrder["order"].subtotal}
+	h3 Delivery Fees: #{userOrder["order"].fee}
+	h3 Tax: #{userOrder["order"].tax}
+	h3 Total: #{userOrder["order"].total}
+	h3 Order Details: 
+	each ele in userOrder["order"]["order"]
+		h4 &emsp;&emsp;Name: #{ele.name}
+		h4 &emsp;&emsp;Quantiy: #{ele.quantity}
+		br
+	include ../partials/footer

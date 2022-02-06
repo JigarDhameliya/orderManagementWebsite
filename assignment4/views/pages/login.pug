@@ -1,0 +1,15 @@
+html
+	head 
+		title Login form
+body
+	include ../partials/header
+
+	p Enter your credentials into the form below and hit Login.
+	p username:
+		input#username(type="textbox")
+	p password:
+		input#password(type="textbox")
+	div#addText
+	button#add(type="button", onclick="loginFunc()") Login
+	script(src="./js/login.js")
+	include ../partials/footer

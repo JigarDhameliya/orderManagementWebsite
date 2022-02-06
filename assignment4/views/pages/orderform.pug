@@ -1,0 +1,19 @@
+html
+    head
+        title UberEatsLite
+body(onload="init()")
+    include ../partials/header
+    br
+    label Hi, Choose any one of the available restaurants: 
+    select#restaurant-select
+    br
+    br
+    div(id="info" style="text-align:center; font-family:candara; background-color:#66ff66") 
+    br
+    div(id="main" style="display:inline-table; font-family:candara; ") 
+        div(id="left" style="display:inline-table; width:250px; font-family:candara")
+        div(id="middle" style="display:inline-table; width:625px; font-family:candara;")
+        div(id="right" style="display:inline-table; font-family:candara")
+    script(src="http://localhost:3000/js/orderform.js")
+    hr
+    include ../partials/footer

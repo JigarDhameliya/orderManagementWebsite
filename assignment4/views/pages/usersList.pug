@@ -1,0 +1,9 @@
+html
+	head
+		title Users List
+body
+	include ../partials/header
+	each user in users
+		a(href="/users/"+ user._id) #{user.username} (#{user._id})
+		br
+	include ../partials/footer

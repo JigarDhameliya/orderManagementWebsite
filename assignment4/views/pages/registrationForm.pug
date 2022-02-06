@@ -1,0 +1,15 @@
+html
+	head 
+		title Registration form
+body
+	include ../partials/header
+
+	p Enter your credentials into the form below and hit Register.
+	p username:
+		input#username(type="textbox")
+	p password:
+		input#password(type="textbox")
+	div#addText
+	button#add(type="button", onclick="registerFunc()") Register
+	script(src="./js/register.js")
+	include ../partials/footer

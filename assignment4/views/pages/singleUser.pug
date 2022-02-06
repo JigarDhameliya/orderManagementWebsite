@@ -1,0 +1,30 @@
+html
+	head
+		title #{user.username}
+body
+	include ../partials/header
+	h1 #{user.username}
+	hr
+	h3 Orders
+	each order in orders
+		a(href='/orders/'+ order._id) #{order._id}
+		br
+	if(session.username === user.username)
+		h3 Privacy setting
+		if user.privacy
+			input#true(type="radio" name="privacySet" value="True" checked="checked")
+			label(for="privacySet") True
+			br
+			input#false(type="radio" name="privacySet" value="False")
+			label(for="privacySet") False
+			br
+		else 
+			input#true(type="radio" name="privacySet" value="True")
+			label(for="privacySet") True
+			br
+			input#false(type="radio" name="privacySet" value="False" checked="checked")
+			label(for="privacySet") False
+			br
+		button#save(type="button", onclick="update()") Save!
+	script(src="../js/updateProfile.js")
+	include ../partials/footer

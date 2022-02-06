@@ -1,0 +1,11 @@
+div#header
+	button(type="button" id="1" onclick="document.location='/'" style="background-color:aqua") Home
+	button(type="button" id="2" onclick="document.location='/users'" style="background-color:#ff5470") Users
+	if(session.loggedin)
+		button(type="button" id="5" onclick="document.location='/orderform'" style="background-color:aqua") Order Form
+		button(type="button" id="7" onclick="document.location='/logout'" style="background-color:#ff5470") Logout
+		a(href="/users/"+ session.userID) User Profile
+	else
+		button(type="button" id="3" onclick="document.location='/login'" style="background-color:aqua") Login
+		button(type="button" id="4" onclick="document.location='/registration'" style="background-color:#ff5470") Registration
+	
